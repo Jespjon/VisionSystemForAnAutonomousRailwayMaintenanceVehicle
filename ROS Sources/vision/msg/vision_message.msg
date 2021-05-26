@@ -1,0 +1,38 @@
+int32 frameNumber
+
+int32 laneStatus
+
+int32 maxSpeedLimit
+
+int32 currentMainSignalMessage
+int32 nextMainSignalMessage
+int32 currentRoadCrossingMessage
+int32 nextRoadCrossingMessage
+
+int32 maxTrackViewDistance
+int32 minTrackViewDistance
+
+int32 distanceToRoadCrossing
+int32 distanceToMainSignal
+int32 distanceToRoadCrossingSignal
+int32 distanceToSpeedSign
+
+int8 switchDetected
+int32 switchedLaneStatus
+int32 incomingSwitchStatus
+
+int8 roadCrossingDetected
+int8 roadCrossingBarriersDetected
+
+int8 ATCSpeedUpSignDetected
+int8 ATCSpeedDownSignDetected
+int8 warningSignDetected
+int8 distantSignalSignDetected
+int8 signVDetected
+
+int32 leftPolesCounter
+int32 rightPolesCounter
+
+string errors
+
+vision_object[] objectList

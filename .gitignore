@@ -1,0 +1,44 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+
+# links
+*.lnk
+
+# Visual Studio
+.vs/
+.vscode/
+CMakeSettings.json
+
+build/
+
+__pycache__/
+
+# Videos
+*.mp4
+*.mov
+*.wmv
+*.flv
+*.avi
+*.mkv

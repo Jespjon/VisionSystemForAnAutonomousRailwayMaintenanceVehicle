@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="vision" name="vision" type="vision_node"/>
+
+    <node pkg="vision" name="camera" type="camera_node"/>
+
+    <node pkg="gps" name="gps" type="gps_node.py"/>
+
+    <node pkg="localization" name="localization" type="localization_node"/>
+
+</launch>

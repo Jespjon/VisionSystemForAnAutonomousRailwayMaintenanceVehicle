@@ -1,0 +1,18 @@
+# Track settings
+PROPORTION_UNDER_HORIZON 0.71	# proportion of image under the horizon: 0.71 for TrainDriversView_HalmstadToGöteborg.mp4
+FRACTION_OF_TRACK_WIDTH 0.24	# fraction of the track width at the bottom and the image width: 0.24 for TrainDriversView_HalmstadToGöteborg.mp4
+
+# Camera or Video input
+USE_CAMERA_INPUT false		# false means use video input
+
+# Draw Vision output in an image
+DRAW_VISION_OUTPUT true
+
+# Save video settings
+SAVE_VIDEO false
+SAVED_VIDEO_NAME Vision_Test.avi
+
+# Video settings
+START_FRAME_NUMBER 1200		# Ex: 1200 or 38000 for TrainDriversView_HalmstadToGöteborg.mp4
+VIDEO_NAME TrainDriversView_HalmstadToGöteborg.mp4 	# TrainDriversView_HalmstadToGöteborg.mp4
+CROP_BOTTOM_FRACTION 0.0	# Crop a fraction of the image at the bottom, 0 for TrainDriversView_HalmstadToGöteborg.mp4

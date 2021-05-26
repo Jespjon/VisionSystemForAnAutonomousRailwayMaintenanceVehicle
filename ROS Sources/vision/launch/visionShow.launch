@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="vision" name="vision" type="vision_node"/>
+
+    <node pkg="vision" name="camera" type="camera_node"/>
+
+    <node pkg="image_view" name="image_view" type="image_view" respawn="false" output="screen">
+	<remap from="image" to="vision_image_topic" />
+    </node>
+
+</launch>
