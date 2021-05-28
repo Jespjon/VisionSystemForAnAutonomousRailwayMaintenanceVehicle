@@ -79,7 +79,7 @@ The programs can be run via the Robot Operating System (ROS) via launch files:
 
 The vision and GPS node outputs can be fetched from the `vision_topic` and `gps_topic` respectively. The output image from the vision node is provided in the `vision_image_topic`. The input image from the active camera is published by the camera node to the `camera_topic`.
 
-Some information and usable ROS commands are provided in the ´ROSCommands.txt´ file. Commands can be sent at runtime to the camera and vision nodes by
+Some information and usable ROS commands are provided in the `ROSCommands.txt` file. Commands can be sent at runtime to the camera and vision nodes via the `vision_input_topic` by
 
 `rostopic pub -1 vision_input_topic vision/vision_input_message [command]`
 
