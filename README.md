@@ -1,7 +1,9 @@
 # Vision System for an Autonomous Railway Maintenance Vehicle
 This project was a Master's thesis project at Chalmers University of Technology, spring 2021. The project was a part of a larger project at Chalmers, led by Krister Wolff and financed by the Swedish Transport Administration, to develop a prototype of an autonomous railway vehicle that can be used for inspection and maintenance of railway infrastructure. 
 
-The aim of this project was to develop a vision system for the autonomous railway vehicle. 
+The aim of this project was to develop a vision system for the autonomous railway vehicle.
+
+The images below are extracted from railway videos published by [Jan Kivisaar](https://www.youtube.com/user/jankiwi), used and modified with permission. For a typical video from Swedish railways used in this project, see [Train Driver's View: Halmstad to Göteborg](https://www.youtube.com/watch?v=1Rq9b_bn6Bc).
 
 ![Vision](/Images/Vision.jpg)
 
@@ -101,3 +103,16 @@ The track detection algorithm can be run independently from the object detection
         * Also set the path to /usr/local/lib/lib{...}.so.4.5.0 for all three lib files (or your version of OpenCV with CUDA support)
     * Repeat the above instruction after each ROS update, or don't update ROS
 * There is an error sometimes occuring when using the cameras, requiring a restart of the computer.
+
+## License
+MIT License
+
+Copyright © 2021 Albin Warnicke and Jesper Jönsson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Most images in this repository are extracted and modified from railway videos from [Jan Kivisaar](https://www.youtube.com/user/jankiwi). The videos are used and modified with permission.
