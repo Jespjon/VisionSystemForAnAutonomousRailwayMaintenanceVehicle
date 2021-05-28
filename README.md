@@ -7,6 +7,8 @@ The images below are extracted from railway videos published by [Jan Kivisaar](h
 
 ![Vision](/Images/Vision.jpg)
 
+![Vision Video](/Videos/VisionVideo.gif)
+
 ## Description
 The vision system is divided into two parts, track detection and object detection. Functionalities for retrieving GPS data and storing such data together with the output from the vision system are also provided.
 
