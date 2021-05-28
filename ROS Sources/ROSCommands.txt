@@ -1,0 +1,21 @@
+roslaunch vision visionShow.launch
+roslaunch vision vision_gps_localization.launch
+roslaunch vision vision.launch
+
+rostopic echo vision_topic
+rostopic echo gps_topic
+
+rosrun image_view image_view image:=vision_image_topic
+rosrun image_view image_view image:=camera_topic
+
+rostopic pub -1 vision_input_topic vision/vision_input_message [command]
+	0 = Turn on visualization of vision results
+	1 = Turn off visualization of vision results
+	2 = Forward driving
+	3 = Backward driving
+	4 = Exit
+
+rosrun vision vision_node
+rosrun vision camera_node
+rosrun gps gps_node.py
+rosrun localization localization_node
