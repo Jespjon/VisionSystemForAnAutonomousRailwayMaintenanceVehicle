@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <atomic>
 
 #include "vision/vision_input_message.h"
 #include "GlobalEnumerationConstants.h"
@@ -26,6 +27,8 @@ cv::Mat frameImage;
 cv::Mat forwardFrameImage;
 cv::Mat backwardFrameImage;
 
+std::atomic<bool> workDone(false);
+
 using std::cout;
 using std::endl;
 
@@ -47,7 +50,7 @@ void VisionInputCallback(const vision::vision_input_message::ConstPtr& msg)
 		cap = capBackwardCamera;
         break;
     case SET_PARAMETER::EXIT:
-        exit(0);
+		workDone.store(true);
         break;
     default:
         break;
@@ -78,7 +81,7 @@ int main(int argc, char** argv) {
 	// Set forward camera as default
 	cap = capForwardCamera;
 
-	while (true) {
+	while (!workDone.load()) {
 		// Loop through possible buffered images
 		for (int i = 0; i < 5; i++) {
 			cap >> frameImage;

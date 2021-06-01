@@ -127,7 +127,7 @@ namespace object_detection {
     // ######## ######## Distance ######## ########
 
     // Distance parameters
-    const int C_4 = 735;
+    const int C_3 = 900;
     const int MAX_DISTANCE = 200;
 
     // Object widths (in meters) (approximated values)
@@ -1021,10 +1021,10 @@ namespace object_detection {
 
     /*
     * Calculate the distance to an object with a known set object width.
-    * distance = C_4 * realObjectWidthMeters / imageObjectWidthPixels,  where C_4 = metersToPixels * focalLenght.
+    * distance = C_3 * realObjectWidthMeters / imageObjectWidthPixels,  where C_3 = metersToPixels * focalLenght.
     */
     int GetObjectDistance(BoundingBox boundingBox, float objectRealWidth) {
-        int distance = (C_4 * objectRealWidth) / boundingBox.w;
+        int distance = (C_3 * objectRealWidth) / boundingBox.w;
         return distance;
     }
 

@@ -121,7 +121,7 @@ namespace track_detection {
 
     // Distance
     const int MAX_DISTANCE = 200; // Maximum distance returned (meters)
-    const int C2 = 735 * 1.435; // C2 = metersToPixels * focalLength * trackWidthInMeters, normal track width = 1.435 m
+    const int C1 = 900 * 1.435; // C1 = metersToPixels * focalLength * trackWidthInMeters, normal track width = 1.435 m
 
     // WarningZone
     const float WARNING_ZOONE_MARGIN = 2;
@@ -420,7 +420,7 @@ namespace track_detection {
         else if (row < DETECTION_IMAGE_HEIGHT - horizonRow) {
             return MAX_DISTANCE;
         }
-        int distance = C2 / GetTrackWidth(row);
+        int distance = C1 / GetTrackWidth(row);
         distance = std::max(distance, 0);
         distance = std::min(distance, MAX_DISTANCE);
         return distance;
