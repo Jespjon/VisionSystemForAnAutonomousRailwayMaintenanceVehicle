@@ -60,6 +60,7 @@ A GPS node was created to be run via ROS. The GPS node fetches GPS data (positio
 
 * TensorRT (Linux)
     * Requires OpenCV with CUDA support
+    * Use [jkjung-avt/tensorrt_demos](https://github.com/jkjung-avt/tensorrt_demos) to create TensorRT files from Darknet files.
 
 * ROS (Optionally)
     * Only needed for the camera, GPS, and localization functionalities. Can run the vision system without it.
@@ -93,7 +94,7 @@ with `[command]` being:
     3: Use BACKWARD camera
     4: Exit
 
-The most important settings of the vision system are set via the `Parameters.txt` file. Here it is able to toggle between camera and prerecorded video (from the `Videos` folder) input and decide if the output video should be saved (in the `Saved Videos` folder).
+The most important settings of the vision system are set via the `Parameters.txt` file. Here it is able to toggle between camera and prerecorded video (from the `Videos` folder) input and decide if the output video should be saved (in the `Saved Videos` folder). Two parameters, `PROPORTION_UNDER_HORIZON` which is the height up to the horizon divided by the image height, and `FRACTION_OF_TRACK_WIDTH` which is the width of the track at the bottom divided by the image width, should be set for each new camera position or video. Otherwise the track detection algorithm may not work properly. Other constants in the program, such as constants regarding to the distance, may be calibrated and set in `TrackDetection.cpp` or `ObjectDetection.cpp`. 
 
 The track detection algorithm can be run independently from the object detection as an independent executable. 
 
